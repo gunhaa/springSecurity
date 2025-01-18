@@ -7,4 +7,4 @@
 
 springSecurity : https://www.youtube.com/playlist?list=PLJkjrxxiBSFCKD9TRKDYn7IE96K2u3C3U
 
-springJWT : 
+springJWT : https://www.youtube.com/playlist?list=PLJkjrxxiBSFCcOjy0AAVGNtIa08VLk1EJ

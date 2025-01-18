@@ -1,0 +1,28 @@
+spring:
+  mustache:
+    servlet:
+      expose-request-attributes: true
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/springSecurity
+    username: aa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+logging.level:
+  org.hibernate.SQL: debug
+
+# 세션 타임아웃 설정을 통해 로그인 이후 세션이 유지되고 소멸하는 시간을 설정할 수 있다.
+# 세션 소멸 시점은 서버에 마지막 특정 요청을 수행한 뒤 설정한 시간 만큼 유지된다. (기본 시간 1800초)
+# Authentication Persistence and Session Management 스프링 공식 문서
+server:
+  servlet:
+    session:
+      # 기본은 초단위
+      timeout: 1800
+      # 분으로도 설정 가능하다.
+#      timeout: 30m

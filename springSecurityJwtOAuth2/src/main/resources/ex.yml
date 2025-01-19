@@ -19,6 +19,13 @@ spring:
             authorization-grant-type: authorization_code
             # 리소스 서버에서 가져올 데이터 범위
             scope: name,email
+          google:
+            client-name: google
+            client-id:
+            client-secret:
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            authorization-grant-type: authorization_code
+            scope: profile,email
         # provider
         #provider의 경우 서비스별로 정해진 값이 존재하며
         #OAuth2 클라이언트 의존성이 유명한 서비스의 경우 내부적으로 데이터를 가지고 있다.

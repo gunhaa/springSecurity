@@ -12,7 +12,7 @@ spring:
             client-name: naver
             # 소셜로그인 신청시 발급해주는 값들(아이디/비밀번호)
             client-id:
-            client-secret: 
+            client-secret:
             # 로그인 성공시 코드를 발급받을 uri(관습적으로 `/login/oauth2/code/서비스명`을 사용한다)
             redirect-uri: http://localhost:8080/login/oauth2/code/naver
             #  4가지 인증 방식 중 한가지를 선택하는 항목.

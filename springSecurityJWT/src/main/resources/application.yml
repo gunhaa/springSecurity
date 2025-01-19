@@ -1,15 +1,19 @@
 spring:
+  jwt:
+    secret: vmfhaltmskdlstkfkdgodyroqkfwkdbalroqkfwkdbalaaaaaaaaaaaaaaaabbbbb
+    # 대칭키를 지정한다.
+    # spring이 값을 가지고있지 않은 임의의 값을 넣으면 된다
   mustache:
     servlet:
       expose-request-attributes: true
   datasource:
     url: jdbc:h2:tcp://localhost/~/springSecurity
-    username: aa
+    username: sa
     password:
     driver-class-name: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true

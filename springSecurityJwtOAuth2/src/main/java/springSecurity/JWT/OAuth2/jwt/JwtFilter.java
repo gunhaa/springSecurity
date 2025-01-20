@@ -29,13 +29,18 @@ public class JwtFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String authorization = null;
         Cookie[] cookies = request.getCookies();
-        for(Cookie cookie : cookies){
-            System.out.println("cookie.getName() = " + cookie.getName());
+        System.out.println("cookies = " + cookies);
 
-            if(cookie.getName().equals("Authorization")){
-                authorization = cookie.getValue();
+        if(cookies!=null){
+            for(Cookie cookie : cookies){
+//            System.out.println("cookie.getName() = " + cookie.getName());
+
+                if(cookie.getName().equals("Authorization")){
+                    authorization = cookie.getValue();
+                }
             }
         }
+
 
         // Authorization 헤더 검증
         if(authorization == null){

@@ -1,33 +1,38 @@
-package springSecurity.JWT.OAuth2.dto;
+package com.example.oauthsession.dto;
 
 import java.util.Map;
 
 public class NaverResponse implements OAuth2Response{
 
-    private final Map<String, Object> attributes;
+    private final Map<String, Object> attribute;
 
-    @SuppressWarnings("unchecked")
     public NaverResponse(Map<String, Object> attribute) {
-        this.attributes = (Map<String, Object>) attribute.get("response");
+
+        this.attribute = (Map<String, Object>) attribute.get("response");
     }
+
 
     @Override
     public String getProvider() {
+
         return "naver";
     }
 
     @Override
     public String getProviderId() {
-        return attributes.get("id").toString();
+
+        return attribute.get("id").toString();
     }
 
     @Override
     public String getEmail() {
-        return attributes.get("email").toString();
+
+        return attribute.get("email").toString();
     }
 
     @Override
     public String getName() {
-        return attributes.get("name").toString();
+
+        return attribute.get("name").toString();
     }
 }
